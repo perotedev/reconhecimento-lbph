@@ -33,5 +33,5 @@ lbph.read("classifier/classificadorLBPH.yml")
 # Gerando classifier do treinamento
 print("Treinando....")
 lbph.update(faces, ids)
-lbph.write('classifier/classificadorLBPH.xml')
+lbph.write('classifier/classificadorLBPH.yml')
 print('Treinamento concluído com sucesso!')
