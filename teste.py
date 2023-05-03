@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix
 
 lbph = cv2.face.LBPHFaceRecognizer_create()
-lbph.read("classifier/classificadorLBPH.xml")
+lbph.read("classifier/classificadorLBPH.yml")
 
 def getImageWithId():
     '''
