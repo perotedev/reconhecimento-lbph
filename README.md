@@ -18,7 +18,13 @@ source venv/bin/active
 .\venv\Scripts\activate
 ```
 
-Use o PIP, gerenciador de pacotes do Python para instalar todos os requisitos
+Atualize o PIP, gerenciador de pacotes do Python
+
+```
+python -m pip install --upgrade pip
+```
+
+Use o PIP, para instalar todos os requisitos
 
 ```
 pip install -r requirements.txt
