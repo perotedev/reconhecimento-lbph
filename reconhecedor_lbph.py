@@ -8,7 +8,7 @@ detectorOlho = cv2.CascadeClassifier('cascade/haarcascade-eye.xml')
 
 # Instanciado LBPH Faces Recognizer
 reconhecedor = cv2.face.LBPHFaceRecognizer_create()
-reconhecedor.read("classifier/classificadorLBPH.xml")
+reconhecedor.read("classifier/classificadorLBPH.yml")
 
 height, width = 220, 220
 font = cv2.FONT_HERSHEY_COMPLEX_SMALL

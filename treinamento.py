@@ -47,5 +47,5 @@ accuracy = 100.0 * num_matches / len(ids)
 # Imprimir a acurácia
 print('Acurácia: %.2f%%' % accuracy)
 
-lbph.write('classifier/classificadorLBPH.xml')
+lbph.write('classifier/classificadorLBPH.yml')
 print('Treinamento concluído com sucesso!')
