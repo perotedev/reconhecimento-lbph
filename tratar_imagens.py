@@ -22,7 +22,7 @@ if not os.path.exists('fotos'):
     os.makedirs('fotos')
 
 # mudar o valor do diretório conforme a necessidade
-pathsImages = [os.path.join('fotos_thales', f) for f in os.listdir('fotos_thales')]
+pathsImages = [os.path.join('teste', f) for f in os.listdir('teste')]
 
 for pathImage in pathsImages:
     imageFace = cv2.cvtColor(cv2.imread(pathImage), cv2.IMREAD_COLOR)
@@ -31,7 +31,7 @@ for pathImage in pathsImages:
     # Realizando face detect
     face_detect = facePath.detectMultiScale(
         gray,
-        scaleFactor=1.5,
+        scaleFactor=1.2,
         minSize=(35, 35),
         flags=cv2.CASCADE_SCALE_IMAGE
     )
@@ -46,7 +46,7 @@ for pathImage in pathsImages:
         face_detect_olho = facePathOlho.detectMultiScale(imageOlhoGray)
 
         face_off = cv2.resize(gray[y:y + h, x:x + w], (width, height))
-        cv2.imwrite('fotos/pessoa.' + str(id) + '.' + str(increment) + '.jpg', face_off)
+        cv2.imwrite('teste/pessoa.' + str(id) + '.' + str(increment) + '.jpg', face_off)
 
         print('[Foto ' + str(increment) + ' capturada com sucesso] - ', np.average(gray))
         increment += 1

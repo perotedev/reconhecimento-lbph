@@ -7,6 +7,20 @@ from sklearn.metrics import confusion_matrix
 lbph = cv2.face.LBPHFaceRecognizer_create()
 lbph.read("classifier/classificadorLBPH.yml")
 
+arrayFaces = [
+    "01 - Rodrigo",
+    "02 - Airton",
+    "03 - Angel",
+    "04 - Aurelio",
+    "05 - Yan",
+    "06 - Pessoa_t1",
+    "07 - Pessoa_t2",
+    "08 - Thalles",
+    "09 - Pessoa_t3",
+    "10 - Kail",
+    "11- Yasmin"
+]
+
 def getImageWithId():
     '''
         Percorrer diretorio fotos, ler todas imagens com CV2 e organizar
@@ -20,7 +34,7 @@ def getImageWithId():
     for pathImage in pathsImages:
         imageFace = cv2.cvtColor(cv2.imread(pathImage), cv2.COLOR_BGR2GRAY)
         id = int(os.path.split(pathImage)[-1].split('.')[1])
-        label = "Pessoa " + str(id)
+        label = arrayFaces[id-1]
 
         ids.append(id)
         faces.append(imageFace)

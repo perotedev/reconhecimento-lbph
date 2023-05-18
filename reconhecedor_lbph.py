@@ -4,7 +4,6 @@ from datetime import datetime
 
 # Caminho haarcascade
 detectorFace = cv2.CascadeClassifier('cascade/haarcascade_frontalface_default.xml')
-detectorOlho = cv2.CascadeClassifier('cascade/haarcascade-eye.xml')
 
 # Instanciado LBPH Faces Recognizer
 reconhecedor = cv2.face.LBPHFaceRecognizer_create()
@@ -15,7 +14,7 @@ font = cv2.FONT_HERSHEY_COMPLEX_SMALL
 camera = cv2.VideoCapture(0)
 lista = []
 
-while (True):
+while True:
     conectado, imagem = camera.read()
     imageGray = cv2.cvtColor(imagem, cv2.COLOR_BGR2GRAY)
 
@@ -40,6 +39,10 @@ while (True):
                 name = 'Rodrigo Perote'
             elif id == 2:
                 name = 'Yasmin Samia'
+            elif id == 3:
+                name = 'Kalil Vinicius'
+            elif id == 4:
+                name = 'Thalles Kaic'
         else:
             name = 'Nao identificado'
 
